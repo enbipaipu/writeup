@@ -13,7 +13,7 @@ Additional details will be available after launching your challenge instance.
 早速、webサイトにアクセスする。  
 下のようなwebサイトが開く。
 
-![](./img/aa41cb7b591d-20250318.png)
+![](./n0s4n1ty1.png)
 
 ファイルを適当に、アップする。  
 どうやら、サニタイズをしていない。  

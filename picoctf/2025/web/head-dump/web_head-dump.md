@@ -12,12 +12,12 @@ Additional details will be available after launching your challenge instance.
 早速、webサイトにアクセスする。  
 下のようなwebサイトが開く。
 
-![](./img/head-dump(1).png)
+![](./head-dump(1).png)
 
 \#API Documentation をクリックすると、/api-docs/ に遷移。
 APIのドキュメントが開けた。
 
-![](./img/head-dump(2).png)
+![](./head-dump(2).png)
 
 怪しい名前 Diagnosingの/headdump がある。
 実行してみる。データがダウンロードできた。
