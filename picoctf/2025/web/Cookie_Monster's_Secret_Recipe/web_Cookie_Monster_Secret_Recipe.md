@@ -13,17 +13,17 @@ You can access the Cookie Monster here and good luck
 早速、webサイトにアクセスする。  
 下のようなwebサイトが開く。
 
-![](./img/cookie_monster(1).png)
+![](./cookie_monster(1).png)
 
 usernameとpasswordを適当に埋めて、ログインしてみる。  
 下のようなサイトが開いた。
 
-![](./img/cookie_monster(2).png)
+![](./cookie_monster(2).png)
 
 ヒント：最近cookiesを見たのはいつですか？と聞かれている。  
 開発者ツールでcookiesを開く。
 
-![](./img/cookie_monster(3).png)
+![](./cookie_monster(3).png)
 
 なんか、謎の文字列があった。base64でデコードしてみる。  
 ```bash
