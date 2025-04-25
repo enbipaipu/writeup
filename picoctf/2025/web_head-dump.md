@@ -12,20 +12,19 @@ Additional details will be available after launching your challenge instance.
 早速、webサイトにアクセスする。  
 下のようなwebサイトが開く。
 
-![]()
-
-ファイルアップロードできる場所は無いようだ。
+![](./img/head-dump(1).png)
 
 \#API Documentation をクリックすると、/api-docs/ に遷移。
 APIのドキュメントが開けた。
 
+![](./img/head-dump(2).png)
+
 怪しい名前 Diagnosingの/headdump がある。
 実行してみる。データがダウンロードできた。
-
-picoCTFから始まる文字列がないかgrepしてみる。
+picoCTFのWebshellでcurlを叩いて、grepでFlagがないか調べる。  
 
 ```bash
-grep picoCTF heapdump-1741390270835.heapsnapshot 
+curl -X 'GET'   'http://verbal-sleep.picoctf.net:50153/heapdump'   -H 'accept: */*' | grep picoCTF{
 ```
 
 Flagがゲットできた。
