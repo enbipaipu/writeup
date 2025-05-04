@@ -1,27 +1,35 @@
-def vigenere_crib_attack(ciphertext, crib, crib_position):
-    """
-    ciphertext: 暗号文（英小文字のみ、記号やスペースも含めてOK）
-    crib: 既知の平文（クリブ、例: 'tsukuctf'）
-    crib_position: クリブが暗号文中に現れる位置（インデックス、0始まり）
-    戻り値: cribに対応する鍵部分の文字列
-    """
-    key_fragment = ""
-    for i in range(len(crib)):
-        c = ciphertext[crib_position + i]
-        p = crib[i]
-        if c.isalpha() and p.isalpha():
-            # 小文字前提
-            k = (ord(c) - ord(p)) % 26
-            key_fragment += chr(ord("a") + k)
+import string
+
+
+def f_inv(c, k):
+    # 復号: (暗号文文字 - 鍵文字) % 26
+    c = ord(c) - ord("a")
+    k = ord(k) - ord("a")
+    ret = (c - k) % 26
+    return chr(ord("a") + ret)
+
+
+def endode(ciphertext, key):
+    p = ""
+    idx = 0
+    cipher_without_symbols = []
+    for c in ciphertext:
+        if c in string.ascii_lowercase:
+            if idx < len(key):
+                k = key[idx]
+            else:
+                k = cipher_without_symbols[idx - len(key)]
+            cipher_without_symbols.append(f_inv(c, k))
+            p += f_inv(c, k)
+            idx += 1
         else:
-            key_fragment += "?"
-    return key_fragment
+            p += c
+    return p
 
 
-# 例
+# 使用例
 ciphertext = "ayb wpg uujmz pwom jaaaaaa aa tsukuctf, hj vynj? mml ogyt re ozbiymvrosf bfq nvjwsum mbmm ef ntq gudwy fxdzyqyc, yeh sfypf usyv nl imy kcxbyl ecxvboap, epa 'avb' wxxw unyfnpzklrq."
-crib = "tsukuctf"
-crib_position = ciphertext.index(crib)  # 「tsukuctf」が現れる位置を自動で取得
+key = "rqappgux"
 
-key_fragment = vigenere_crib_attack(ciphertext, crib, crib_position)
-print(f"鍵のこの部分: {key_fragment}")
+
+print(endode(ciphertext, key))

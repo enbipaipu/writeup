@@ -1,1 +1,10 @@
 ciphertext="ayb wpg uujmz pwom jaaaaaa aa tsukuctf, hj vynj? mml ogyt re ozbiymvrosf bfq nvjwsum mbmm ef ntq gudwy fxdzyqyc, yeh sfypf usyv nl imy kcxbyl ecxvboap, epa 'avb' wxxw unyfnpzklrq."
+key                   ayb wpgu ujmzpwo mj aaaaaaaa  ts ukuc  tfhj vyn jm mlogytreozb iym vrosfbf qnvj ws umm bmmef ntqgudwy  fxd zyqyc yehs fy pfu syvnli mykcxbyl  ecx  vbo  apep aavbwxxwuny
+p             ayb wpg joy this problem or tsukuctf, or both? the flag is concatenate the seventh word in the first sentence, the third word in the second sentence, and 'fun' with underscores.
+
+
+rqappgux
+
+
+
+TsukuCTF25{tsukuctf,_is_fun}
