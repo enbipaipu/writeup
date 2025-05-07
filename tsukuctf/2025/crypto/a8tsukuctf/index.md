@@ -1,6 +1,3 @@
-TsukuCTF25{tsukuctf,_is_fun}
-
-https://www.dcode.fr/vigenere-cipher
 
 ## a8tsukuctf
 ### 問題文
@@ -55,12 +52,27 @@ ayb wpg uujmz pwom jaaaaaa aa tsukuctf, hj vynj? mml ogyt re ozbiymvrosf bfq nvj
 ```
 
 使うツール
-- Vigenere Cipher Solver : https://www.dcode.fr/vigenere-cipher
-
-復号手順
-- Vigenere Cipher Solverを開く
-- Vigenere ciphertextに、暗号文のtsukuctfから最後までを入力。
-- Decryption method の Knowing the Key/Password に、
+- cryptii : https://cryptii.com/pipes/vigenere-cipher
 
 
-aaaaaa aa tsukuctf hj vynj mml ogyt re ozbiymvrosf bfq nvjwsum mbmm ef ntq gudwy fxdzyqyc yeh sfypf usyv nl imy kcxbyl ecxvboap epa avb wxxw unyfnpzklrq.
+暗号文は、tsukuctfからの文字列
+```
+tsukuctf, hj vynj? mml ogyt re ozbiymvrosf bfq nvjwsum mbmm ef ntq gudwy fxdzyqyc, yeh sfypf usyv nl imy kcxbyl ecxvboap, epa 'avb' wxxw unyfnpzklrq.
+```
+
+
+keyは、8個のaからの文字列。keyが暗号文より多くならないように気をつける。
+```
+aaaaaaaatsukuctfhjvynjmmlogytreozbiymvrosfbfqnvjwsummbmmefntqgudwyfxdzyqycyehsfypfusyvnlimykcxbylecxvboapepaavbwxxwuny
+```
+
+平文
+```
+tsukuctf, or both? the flag is concatenate the seventh word in the first sentence, the third word in the second sentence, and 'fun' with underscores.
+```
+1文目の7番目の単語は、`tsukuctf`  
+2文目の3番目の単語は、`is`
+それと `fun` という単語を `_` でつなげてFlagができるようだ。  
+
+`TsukuCTF25{tsukuctf_is_fun}`  
+正解した。
